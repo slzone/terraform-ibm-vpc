@@ -19,14 +19,14 @@ resource ibm_is_network_acl network_acl {
 
   rules {
     name        = "egress"
-    action      = "allow"
+    action      = "deny"
     source      = "0.0.0.0/0"
     destination = "0.0.0.0/0"
     direction   = "outbound"
   }
   rules {
     name        = "ingress"
-    action      = "allow"
+    action      = "deny"
     source      = "0.0.0.0/0"
     destination = "0.0.0.0/0"
     direction   = "inbound"
