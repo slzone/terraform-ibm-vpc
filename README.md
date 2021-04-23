@@ -1,4 +1,4 @@
-# IBM Cloud VPC module
+### IBM Cloud VPC module
 
 Provisions a VPC instance and related resources. The full list of resources provisioned is as follows:
 
