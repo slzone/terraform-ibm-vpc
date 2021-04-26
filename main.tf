@@ -42,7 +42,7 @@ resource ibm_is_network_acl network_acl {
       port_min = 22
     }
   }
-  }
+  
    rules {
     name        = "ingress"
     action      = "deny"
@@ -53,7 +53,6 @@ resource ibm_is_network_acl network_acl {
       port_max = 3389
       port_min = 3389
     }
-  }
   }
 }
 
