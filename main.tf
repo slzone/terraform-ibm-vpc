@@ -105,3 +105,24 @@ resource ibm_is_security_group_rule private_dns_2 {
     port_max = 53
   }
 }
+
+resource default_security_group "default_security_group_name" {
+  name           = "${local.vpc_name}-sg"
+  vpc            = ibm_is_vpc.vpc.id
+  resource_group = var.resource_group_id
+
+  rules {
+    name        = "egress"
+    action      = "deny"
+    source      = "0.0.0.0/0"
+    destination = "0.0.0.0/0"
+    direction   = "outbound"
+  }
+  rules {
+    name        = "ingress"
+    action      = "deny"
+    source      = "0.0.0.0/0"
+    destination = "0.0.0.0/0"
+    direction   = "inbound"
+  }
+}
